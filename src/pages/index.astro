@@ -29,8 +29,8 @@ const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile
         budgeting, financial reporting, and full-cycle bookkeeping.
       </p>
       <div class="flex flex-col sm:flex-row gap-3 mt-6 md:mt-8 justify-center md:justify-start">
-        <a href="#experience" class="btn-primary">
-          View My Profile
+        <a href={basePath + '/about'} class="btn-primary">
+          View My Resume
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </a>
         <a href={basePath + '/contact'} class="btn-secondary">
