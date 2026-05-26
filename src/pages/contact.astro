@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact - Management Accounting Portfolio" activePage="contact">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <span class="section-label">Contact</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Get In Touch</h1>
+    <p class="text-slate-600 text-lg mb-12 leading-relaxed">
+      I'm actively seeking entry-level management accounting opportunities.
+      Feel free to reach out — I'd love to hear from you!
+    </p>
+
+    <div class="max-w-xl mx-auto space-y-4">
+      <!-- Email -->
+      <div class="card flex items-center gap-4">
+        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center shrink-0">
+          <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </div>
+        <div>
+          <p class="text-sm text-slate-500">Email</p>
+          <p class="font-medium text-slate-900">your.email@example.com</p>
+        </div>
+      </div>
+
+      <!-- LinkedIn -->
+      <div class="card flex items-center gap-4">
+        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center shrink-0">
+          <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+        </div>
+        <div>
+          <p class="text-sm text-slate-500">LinkedIn</p>
+          <p class="font-medium text-slate-900">linkedin.com/in/yourprofile</p>
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="card flex items-center gap-4">
+        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center shrink-0">
+          <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <div>
+          <p class="text-sm text-slate-500">Location</p>
+          <p class="font-medium text-slate-900">[City, Country]</p>
+        </div>
+      </div>
+
+      <!-- Send Email Button -->
+      <div class="text-center pt-6">
+        <a
+          href="mailto:your.email@example.com?subject=Hello%20from%20your%20Portfolio"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors shadow-md text-lg"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          Send Me an Email
+        </a>
+        <p class="text-sm text-slate-400 mt-3">Opens your default email app</p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

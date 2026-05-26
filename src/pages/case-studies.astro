@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const projects = [
+  {
+    slug: 'internship-finance',
+    category: 'Internship',
+    title: 'Finance Intern — [Company Name]',
+    description: 'Supported the finance team in day-to-day accounting operations including accounts payable processing, bank reconciliation, and preparation of monthly financial reports. Assisted in the annual budget planning and variance analysis.',
+    tools: ['Excel', 'QuickBooks', 'Accounting Software'],
+    outcomes: ['Processed 200+ invoices with 99.8% accuracy rate', 'Assisted in monthly close process reducing turnaround by 2 days', 'Presented budget variance analysis to finance manager'],
+  },
+  {
+    slug: 'internship-audit',
+    category: 'Internship',
+    title: 'Audit Intern — [Company Name]',
+    description: 'Worked alongside senior auditors in conducting external audits for client companies. Performed substantive testing, documented internal control processes, and prepared audit workpapers in compliance with auditing standards.',
+    tools: ['Excel', 'Audit Software', 'PSA/AAS'],
+    outcomes: ['Contributed to 3 successful client audit engagements', 'Identified 2 control weaknesses with recommended remediation', 'Completed audit documentation 100% on time'],
+  },
+  {
+    slug: 'thesis-cost-analysis',
+    category: 'Capstone Thesis',
+    title: 'Cost Behavior Analysis in the Service Industry',
+    description: 'Conducted an in-depth study of cost behavior patterns for a local service company using activity-based costing (ABC) methodology. Analyzed fixed vs. variable costs, identified key cost drivers, and recommended strategies for cost optimization.',
+    tools: ['Excel', 'SPSS', 'ABC Framework'],
+    outcomes: ['Identified 3 major cost drivers representing 70% of overhead', 'Proposed restructuring saving estimated 15% in operational costs', 'Presented to faculty panel — received distinction'],
+  },
+  {
+    slug: 'budget-competition',
+    category: 'Case Competition',
+    title: 'Inter-University Budgeting Simulation — 2nd Place',
+    description: 'Led a cross-functional team of 4 in a 2-day intensive budgeting simulation. Developed a master budget, cash flow forecast, and strategic recommendations for a manufacturing company case study.',
+    tools: ['Excel Financial Modeling', 'PowerPoint', 'Team Presentation'],
+    outcomes: ['2nd place among 12 competing university teams', 'Built fully integrated 3-statement financial model', 'Received "Best Analytical Approach" recognition from judges'],
+  },
+  {
+    slug: 'dashboard-project',
+    category: 'Academic Project',
+    title: 'Management KPI Dashboard for a Retail Business',
+    description: 'As part of a Management Accounting capstone course, designed a performance measurement framework and built an interactive KPI dashboard tracking revenue, cost trends, inventory turnover, and profitability ratios.',
+    tools: ['Power BI', 'Excel', 'SQL'],
+    outcomes: ['Created 15+ interactive KPIs with drill-down capability', 'Simulated real-world monthly reporting process', 'Demonstrated variance analysis and trend interpretation'],
+  },
+  {
+    slug: 'tax-volunteer',
+    category: 'Community Service',
+    title: 'Volunteer Tax Preparation Program',
+    description: 'Participated in a university-sponsored community tax assistance program, preparing income tax returns for low-income individuals and families under the supervision of certified accountants.',
+    tools: ['Tax Preparation Software', 'BIR/Tax Forms'],
+    outcomes: ['Prepared 25+ tax returns over 2 semesters', 'Ensured 100% compliance accuracy rate', 'Developed client communication and documentation skills'],
+  },
+];
+---
+
+<BaseLayout title="Experience & Projects - Management Accounting Portfolio" activePage="case-studies">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <span class="section-label">Portfolio</span>
+    <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Internships & Projects</h1>
+    <p class="text-slate-600 text-lg mb-12 max-w-2xl leading-relaxed">
+      Internship experience, academic projects, and case competitions demonstrating
+      practical application of management accounting principles and a strong foundation for career growth.
+    </p>
+
+    <div class="space-y-6">
+      {projects.map((p) => (
+        <article class="card">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-xs font-semibold text-blue-600 uppercase tracking-wide bg-blue-50 px-2.5 py-1 rounded-full">
+              {p.category}
+            </span>
+          </div>
+          <h2 class="text-xl font-semibold text-slate-900 mb-3">{p.title}</h2>
+          <p class="text-slate-600 mb-5 leading-relaxed">{p.description}</p>
+
+          <div class="mb-4">
+            <h4 class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Tools Used</h4>
+            <div class="flex flex-wrap gap-2">
+              {p.tools.map((t) => (
+                <span class="text-xs bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full font-medium">{t}</span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Key Outcomes</h4>
+            <ul class="space-y-1.5">
+              {p.outcomes.map((o) => (
+                <li class="text-sm text-slate-600 flex items-start gap-2">
+                  <span class="text-blue-600 font-bold shrink-0 mt-0.5">&rsaquo;</span>
+                  {o}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

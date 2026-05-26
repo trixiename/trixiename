@@ -1,0 +1,167 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+const imgPath = base.endsWith('/') ? base + 'bk.jpg' : base + '/bk.jpg';
+const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile.jpg';
+---
+
+<BaseLayout title="About - Management Accounting Portfolio" activePage="about">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10 mb-12">
+      <div class="shrink-0">
+        <div class="relative">
+          <div class="absolute inset-0 rounded-full bg-blue-100 blur-xl opacity-60"></div>
+          <img src={profilePath} alt="Trixie Anne B. Name" class="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover ring-4 ring-white shadow-lg" />
+        </div>
+      </div>
+      <div class="text-center md:text-left">
+        <span class="section-label">About</span>
+        <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">About Me</h1>
+        <p class="text-lg text-slate-600 leading-relaxed">
+          I am a <strong class="text-slate-900">Certified Bookkeeper</strong> and
+          <strong class="text-slate-900">recent Management Accounting graduate</strong>
+          from Batangas State University (TNEU) — Arasof Nasugbu Campus. My academic journey
+          includes consistent Dean's List recognition and a strong foundation in cost management,
+          budgeting, financial reporting, and business strategy.
+        </p>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <h2 class="text-xl font-semibold text-slate-900 mb-4 flex items-center gap-2">
+      <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+      Education
+    </h2>
+
+    <div class="card mb-4">
+      <div class="flex justify-between items-start mb-1">
+        <div>
+          <h3 class="font-semibold text-slate-900">BS Management Accounting</h3>
+          <p class="text-sm text-slate-600">Batangas State University (TNEU) — Arasof Nasugbu Campus</p>
+        </div>
+        <span class="text-sm text-slate-400 shrink-0 ml-4">[Year] - [Year]</span>
+      </div>
+      <div class="mt-3 text-sm text-slate-600">
+        <p class="text-slate-700 font-medium mb-1">Dean's List:</p>
+        <ul class="space-y-0.5 ml-1">
+          <li class="flex gap-2"><span class="text-blue-600">&#8226;</span> 1st Sem, 1st Year — BS Accountancy</li>
+          <li class="flex gap-2"><span class="text-blue-600">&#8226;</span> 1st Sem, 2nd Year — BS Accountancy</li>
+          <li class="flex gap-2"><span class="text-blue-600">&#8226;</span> 1st Sem, 3rd Year — BS Management Accounting</li>
+        </ul>
+        <p class="mt-2"><strong>Program:</strong> Transferred from BS Accountancy to BS Management Accounting</p>
+        <p class="mt-1"><strong>Relevant Coursework:</strong> Cost Accounting, Managerial Accounting, Financial Management, Taxation, Auditing, Business Analytics, Strategic Management</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="flex justify-between items-start mb-1">
+        <div>
+          <h3 class="font-semibold text-slate-900">Senior High School</h3>
+          <p class="text-sm text-slate-600">Calaca Senior High School — ABM Strand</p>
+        </div>
+        <span class="text-sm text-slate-400 shrink-0 ml-4">2020-2022</span>
+      </div>
+      <ul class="mt-3 space-y-1 text-sm text-slate-600">
+        <li class="flex gap-2"><span class="text-blue-600 font-bold">&rsaquo;</span> With High Honors — 2021-2022</li>
+        <li class="flex gap-2"><span class="text-blue-600 font-bold">&rsaquo;</span> With Honors — 2020-2021</li>
+      </ul>
+    </div>
+
+    <!-- Certification -->
+    <h2 class="text-xl font-semibold text-slate-900 mt-10 mb-4 flex items-center gap-2">
+      <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      Certification
+    </h2>
+
+    <div class="card">
+      <div>
+        <div class="flex-1">
+          <h3 class="font-semibold text-slate-900">Certified Bookkeeper</h3>
+          <p class="text-sm text-slate-600">[Certifying Body] — Issued [Year]</p>
+          <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+            Certified in bookkeeping principles including double-entry accounting,
+            bank reconciliation, payroll processing, financial statement preparation,
+            and internal controls.
+          </p>
+        </div>
+        <a href={imgPath} target="_blank" class="block mt-4 group">
+          <img src={imgPath} alt="Certified Bookkeeper Certificate" class="w-full max-w-md rounded-xl border border-slate-200 shadow-sm group-hover:shadow-lg transition-shadow" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Internship Experience -->
+    <h2 class="text-xl font-semibold text-slate-900 mt-10 mb-4 flex items-center gap-2">
+      <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+      Internship Experience
+    </h2>
+
+    <div class="card mb-4">
+      <div class="flex justify-between items-start mb-2">
+        <div>
+          <h3 class="font-semibold text-slate-900">Finance Intern</h3>
+          <p class="text-sm text-slate-600">[Company Name] — [Location]</p>
+        </div>
+        <span class="text-sm text-slate-400 shrink-0 ml-4">[Month Year] - [Month Year]</span>
+      </div>
+      <ul class="space-y-1.5 text-sm text-slate-600">
+        <li class="flex gap-2"><span class="text-blue-600 font-bold shrink-0">&rsaquo;</span> Accounts payable processing, bank reconciliation, and monthly financial report preparation</li>
+        <li class="flex gap-2"><span class="text-blue-600 font-bold shrink-0">&rsaquo;</span> Supported annual budget planning and variance analysis for department heads</li>
+        <li class="flex gap-2"><span class="text-blue-600 font-bold shrink-0">&rsaquo;</span> Maintained accurate financial records ensuring compliance with company policies</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="flex justify-between items-start mb-2">
+        <div>
+          <h3 class="font-semibold text-slate-900">Audit Intern</h3>
+          <p class="text-sm text-slate-600">[Company Name] — [Location]</p>
+        </div>
+        <span class="text-sm text-slate-400 shrink-0 ml-4">[Month Year] - [Month Year]</span>
+      </div>
+      <ul class="space-y-1.5 text-sm text-slate-600">
+        <li class="flex gap-2"><span class="text-blue-600 font-bold shrink-0">&rsaquo;</span> Participated in external audit engagements including substantive testing and control documentation</li>
+        <li class="flex gap-2"><span class="text-blue-600 font-bold shrink-0">&rsaquo;</span> Prepared audit workpapers in accordance with Philippine Standards on Auditing</li>
+        <li class="flex gap-2"><span class="text-blue-600 font-bold shrink-0">&rsaquo;</span> Collaborated with senior auditors to identify process improvements for client accounting systems</li>
+      </ul>
+    </div>
+
+    <!-- Skills -->
+    <h2 class="text-xl font-semibold text-slate-900 mt-10 mb-4">Technical Skills</h2>
+
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="card">
+        <h3 class="font-semibold text-slate-900 mb-3 text-sm uppercase tracking-wide text-blue-600">Accounting &amp; Finance</h3>
+        <ul class="space-y-1.5 text-sm text-slate-600">
+          <li class="flex gap-2"><span class="text-blue-600">&#8226;</span> Certified Bookkeeping (Full-Cycle)</li>
+          <li class="flex gap-2"><span class="text-blue-600">&#8226;</span> Cost Accounting &amp; Analysis</li>
+          <li class="flex gap-2"><span class="text-blue-600">&#8226;</span> Budgeting &amp; Forecasting</li>
+          <li class="flex gap-2"><span class="text-blue-600">&#8226;</span> Financial Statement Preparation</li>
+          <li class="flex gap-2"><span class="text-blue-600">&#8226;</span> Bank Reconciliation &amp; Payroll</li>
+          <li class="flex gap-2"><span class="text-blue-600">&#8226;</span> Variance Analysis</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 class="font-semibold text-slate-900 mb-3 text-sm uppercase tracking-wide text-blue-600">Tools &amp; Technology</h3>
+        <ul class="space-y-1.5 text-sm text-slate-600">
+          <li class="flex gap-2"><span class="text-blue-600">&#8226;</span> Microsoft Office Suite (Word, Excel, PowerPoint)</li>
+          <li class="flex gap-2"><span class="text-blue-600">&#8226;</span> BIR Forms &amp; Tax Compliance</li>
+          <li class="flex gap-2"><span class="text-blue-600">&#8226;</span> Google Workspace</li>
+          <li class="flex gap-2"><span class="text-blue-600">&#8226;</span> QuickBooks (Basic)</li>
+          <li class="flex gap-2"><span class="text-blue-600">&#8226;</span> Online Banking &amp; Payment Platforms</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Goals -->
+    <h2 class="text-xl font-semibold text-slate-900 mt-10 mb-4">Professional Goals</h2>
+    <div class="bg-blue-50 border border-blue-100 rounded-xl p-6">
+      <p class="text-slate-700 leading-relaxed">
+        I am seeking an <strong>entry-level Management Accounting role</strong> where I can apply my
+        academic training, certification, and internship experience. I am particularly interested in
+        cost analysis, budgeting, and financial planning roles where I can contribute to
+        data-driven business decisions and grow as a finance professional.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

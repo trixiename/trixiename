@@ -1,0 +1,19 @@
+{
+  "name": "acc-portfolio",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "https://example.github.io/acc_portfolio",
+  "description": "Professional portfolio for Management Accounting - built with Astro",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.0.0",
+    "@astrojs/tailwind": "^5.0.0",
+    "tailwindcss": "^3.4.0"
+  }
+}

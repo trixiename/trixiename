@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== DESIGN TOKENS ===== */
+:root {
+  --brand-50: #eff6ff;
+  --brand-100: #dbeafe;
+  --brand-500: #3b82f6;
+  --brand-600: #2563eb;
+  --brand-700: #1d4ed8;
+  --accent-50: #f8fafc;
+  --card-border: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+}
+
+/* ===== BASE ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* ===== TYPOGRAPHY ===== */
+.section-label {
+  @apply text-xs font-semibold text-blue-600 uppercase tracking-[0.12em] mb-4 block;
+}
+
+.section-title {
+  @apply text-2xl md:text-3xl font-bold text-slate-900;
+}
+
+/* ===== CARDS ===== */
+.card {
+  @apply bg-white rounded-xl border border-slate-200 p-6 
+         hover:border-blue-200 hover:shadow-md 
+         transition-all duration-200;
+}
+
+.card-compact {
+  @apply bg-white rounded-lg border border-slate-200 p-5
+         hover:border-blue-200 hover:shadow-sm
+         transition-all duration-200;
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+  @apply inline-flex items-center gap-2 px-6 py-3 
+         bg-blue-600 text-white font-medium 
+         rounded-lg hover:bg-blue-700 
+         transition-colors shadow-sm;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center gap-2 px-6 py-3 
+         border border-slate-300 text-slate-700 font-medium 
+         rounded-lg hover:bg-slate-50 
+         transition-colors;
+}
+
+/* ===== SECTION DIVIDERS ===== */
+.section-divider {
+  @apply border-b border-slate-200;
+}
+
+/* ===== PROSE OVERRIDES ===== */
+.prose-custom h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: #0f172a;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.prose-custom p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+  color: #475569;
+}
+
+.prose-custom ul {
+  list-style: none;
+  padding-left: 0;
+}
