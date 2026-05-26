@@ -159,45 +159,210 @@ const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile
     </div>
   </section>
 
-  <!-- Skills -->
-  <section class="bg-white py-10 md:py-16 border-y border-slate-200">
+  <!-- Skills (Interactive) -->
+  <section id="skills" class="bg-white py-10 md:py-16 border-y border-slate-200">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <span class="section-label text-center">Expertise</span>
       <h2 class="section-title mb-10 text-center">Skills & Expertise</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-        <div class="text-center">
-          <h3 class="font-semibold text-slate-900 mb-4 text-sm uppercase tracking-wide text-blue-600">Accounting</h3>
-          <ul class="space-y-2 text-sm text-slate-600">
-            <li class="bg-slate-50 rounded-lg px-3 py-2">Full-Cycle Bookkeeping</li>
-            <li class="bg-slate-50 rounded-lg px-3 py-2">Cost Accounting &amp; Analysis</li>
-            <li class="bg-slate-50 rounded-lg px-3 py-2">Budgeting &amp; Forecasting</li>
-            <li class="bg-slate-50 rounded-lg px-3 py-2">Financial Statement Preparation</li>
-            <li class="bg-slate-50 rounded-lg px-3 py-2">Variance Analysis</li>
-          </ul>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-10">
+
+        <!-- Accounting -->
+        <div>
+          <h3 class="font-semibold text-slate-900 mb-5 text-sm uppercase tracking-wide text-blue-600 text-center">Accounting</h3>
+          <div class="space-y-4">
+            <div class="skill-item">
+              <div class="flex justify-between text-sm mb-1">
+                <span class="text-slate-700 font-medium">Full-Cycle Bookkeeping</span>
+                <span class="text-slate-400 skill-pct">90%</span>
+              </div>
+              <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                <div class="h-full bg-blue-600 rounded-full skill-bar" style="width: 0%" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between text-sm mb-1">
+                <span class="text-slate-700 font-medium">Cost Accounting &amp; Analysis</span>
+                <span class="text-slate-400 skill-pct">85%</span>
+              </div>
+              <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                <div class="h-full bg-blue-600 rounded-full skill-bar" style="width: 0%" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between text-sm mb-1">
+                <span class="text-slate-700 font-medium">Budgeting &amp; Forecasting</span>
+                <span class="text-slate-400 skill-pct">85%</span>
+              </div>
+              <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                <div class="h-full bg-blue-600 rounded-full skill-bar" style="width: 0%" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between text-sm mb-1">
+                <span class="text-slate-700 font-medium">Financial Statement Prep</span>
+                <span class="text-slate-400 skill-pct">80%</span>
+              </div>
+              <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                <div class="h-full bg-blue-600 rounded-full skill-bar" style="width: 0%" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between text-sm mb-1">
+                <span class="text-slate-700 font-medium">Variance Analysis</span>
+                <span class="text-slate-400 skill-pct">80%</span>
+              </div>
+              <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                <div class="h-full bg-blue-600 rounded-full skill-bar" style="width: 0%" data-width="80"></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="text-center">
-          <h3 class="font-semibold text-slate-900 mb-4 text-sm uppercase tracking-wide text-blue-600">Tools & Technology</h3>
-          <ul class="space-y-2 text-sm text-slate-600">
-            <li class="bg-slate-50 rounded-lg px-3 py-2">Microsoft Office Suite (Word, Excel, PowerPoint)</li>
-            <li class="bg-slate-50 rounded-lg px-3 py-2">BIR Forms &amp; Tax Compliance</li>
-            <li class="bg-slate-50 rounded-lg px-3 py-2">Google Workspace</li>
-            <li class="bg-slate-50 rounded-lg px-3 py-2">QuickBooks (Basic)</li>
-            <li class="bg-slate-50 rounded-lg px-3 py-2">Online Banking &amp; Payment Platforms</li>
-          </ul>
+
+        <!-- Tools & Technology -->
+        <div>
+          <h3 class="font-semibold text-slate-900 mb-5 text-sm uppercase tracking-wide text-blue-600 text-center">Tools & Technology</h3>
+          <div class="space-y-4">
+            <div class="skill-item">
+              <div class="flex justify-between text-sm mb-1">
+                <span class="text-slate-700 font-medium">MS Office (Word, Excel, PPT)</span>
+                <span class="text-slate-400 skill-pct">95%</span>
+              </div>
+              <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                <div class="h-full bg-emerald-600 rounded-full skill-bar" style="width: 0%" data-width="95"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between text-sm mb-1">
+                <span class="text-slate-700 font-medium">BIR Forms &amp; Tax Compliance</span>
+                <span class="text-slate-400 skill-pct">85%</span>
+              </div>
+              <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                <div class="h-full bg-emerald-600 rounded-full skill-bar" style="width: 0%" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between text-sm mb-1">
+                <span class="text-slate-700 font-medium">Google Workspace</span>
+                <span class="text-slate-400 skill-pct">90%</span>
+              </div>
+              <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                <div class="h-full bg-emerald-600 rounded-full skill-bar" style="width: 0%" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between text-sm mb-1">
+                <span class="text-slate-700 font-medium">QuickBooks (Basic)</span>
+                <span class="text-slate-400 skill-pct">75%</span>
+              </div>
+              <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                <div class="h-full bg-emerald-600 rounded-full skill-bar" style="width: 0%" data-width="75"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between text-sm mb-1">
+                <span class="text-slate-700 font-medium">Online Banking Platforms</span>
+                <span class="text-slate-400 skill-pct">80%</span>
+              </div>
+              <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                <div class="h-full bg-emerald-600 rounded-full skill-bar" style="width: 0%" data-width="80"></div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="text-center">
-          <h3 class="font-semibold text-slate-900 mb-4 text-sm uppercase tracking-wide text-blue-600">Professional</h3>
-          <ul class="space-y-2 text-sm text-slate-600">
-            <li class="bg-slate-50 rounded-lg px-3 py-2">Analytical &amp; Critical Thinking</li>
-            <li class="bg-slate-50 rounded-lg px-3 py-2">Attention to Detail</li>
-            <li class="bg-slate-50 rounded-lg px-3 py-2">Team Collaboration</li>
-            <li class="bg-slate-50 rounded-lg px-3 py-2">Client Communication</li>
-            <li class="bg-slate-50 rounded-lg px-3 py-2">Time Management</li>
-          </ul>
+
+        <!-- Professional -->
+        <div>
+          <h3 class="font-semibold text-slate-900 mb-5 text-sm uppercase tracking-wide text-blue-600 text-center">Professional</h3>
+          <div class="space-y-4">
+            <div class="skill-item">
+              <div class="flex justify-between text-sm mb-1">
+                <span class="text-slate-700 font-medium">Analytical &amp; Critical Thinking</span>
+                <span class="text-slate-400 skill-pct">90%</span>
+              </div>
+              <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                <div class="h-full bg-violet-600 rounded-full skill-bar" style="width: 0%" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between text-sm mb-1">
+                <span class="text-slate-700 font-medium">Attention to Detail</span>
+                <span class="text-slate-400 skill-pct">95%</span>
+              </div>
+              <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                <div class="h-full bg-violet-600 rounded-full skill-bar" style="width: 0%" data-width="95"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between text-sm mb-1">
+                <span class="text-slate-700 font-medium">Team Collaboration</span>
+                <span class="text-slate-400 skill-pct">85%</span>
+              </div>
+              <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                <div class="h-full bg-violet-600 rounded-full skill-bar" style="width: 0%" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between text-sm mb-1">
+                <span class="text-slate-700 font-medium">Client Communication</span>
+                <span class="text-slate-400 skill-pct">80%</span>
+              </div>
+              <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                <div class="h-full bg-violet-600 rounded-full skill-bar" style="width: 0%" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="flex justify-between text-sm mb-1">
+                <span class="text-slate-700 font-medium">Time Management</span>
+                <span class="text-slate-400 skill-pct">90%</span>
+              </div>
+              <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                <div class="h-full bg-violet-600 rounded-full skill-bar" style="width: 0%" data-width="90"></div>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
+
+  <style>
+    .skill-bar {
+      transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .skill-bar.animate {
+      width: var(--target-width) !important;
+    }
+    .skill-item:hover .skill-bar {
+      filter: brightness(1.1);
+      box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
+    }
+    .skill-item:hover .skill-pct {
+      color: #1e40af;
+      font-weight: 600;
+    }
+  </style>
+
+  <script>
+    // Animate skill bars on scroll into view
+    document.addEventListener('DOMContentLoaded', () => {
+      const bars = document.querySelectorAll('.skill-bar');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const bar = entry.target;
+            const width = bar.dataset.width;
+            bar.style.setProperty('--target-width', width + '%');
+            bar.classList.add('animate');
+            observer.unobserve(bar);
+          }
+        });
+      }, { threshold: 0.3 });
+
+      bars.forEach(bar => observer.observe(bar));
+    });
+  </script>
 
   <!-- Projects Preview -->
   <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
