@@ -17,6 +17,18 @@ const navLinks = [
 ];
 ---
 
+<script>
+  // Mobile hamburger toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
+  });
+</script>
 <!doctype html>
 <html lang="en">
   <head>
@@ -33,6 +45,7 @@ const navLinks = [
         <a href="/" class="text-lg font-semibold text-slate-900 hover:text-blue-700 transition-colors">
           <span class="text-blue-600">MA</span> Portfolio
         </a>
+        <!-- Desktop nav -->
         <div class="hidden sm:flex items-center gap-1">
           {navLinks.map((link) => (
             <a
@@ -49,16 +62,24 @@ const navLinks = [
             </a>
           ))}
         </div>
-        <!-- Mobile nav -->
-        <div class="sm:hidden flex gap-2">
+        <!-- Mobile hamburger -->
+        <button id="nav-toggle" class="sm:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors" aria-label="Toggle navigation">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </nav>
+      <!-- Mobile dropdown menu -->
+      <div id="nav-menu" class="hidden sm:hidden bg-white/95 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 py-2 flex flex-col gap-1">
           {navLinks.map((link) => (
             <a
               href={link.href}
               class={`
-                px-3 py-1.5 text-xs font-medium rounded-lg transition-colors
+                px-4 py-3 text-base font-medium rounded-lg transition-colors
                 ${activePage === link.id
                   ? 'bg-blue-50 text-blue-700'
-                  : 'text-slate-500 hover:text-slate-900'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
                 }
               `}
             >
@@ -66,7 +87,7 @@ const navLinks = [
             </a>
           ))}
         </div>
-      </nav>
+      </div>
     </header>
 
     <!-- Main Content -->
@@ -76,15 +97,15 @@ const navLinks = [
 
     <!-- Footer -->
     <footer class="bg-white border-t border-slate-200">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
         <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div class="text-sm text-slate-500">
+          <div class="text-xs sm:text-sm text-slate-500 text-center sm:text-left">
             <p>&copy; 2026 Trixie Anne B. Name — Management Accounting Portfolio</p>
           </div>
-          <div class="flex items-center gap-4 text-sm text-slate-400">
-            <a href="mailto:your.email@example.com" class="hover:text-blue-600 transition-colors">Email</a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="hover:text-blue-600 transition-colors">LinkedIn</a>
-            <a href="/contact" class="hover:text-blue-600 transition-colors">Contact</a>
+          <div class="flex items-center gap-2 sm:gap-4 text-sm text-slate-400">
+            <a href="mailto:your.email@example.com" class="px-3 py-2 hover:text-blue-600 transition-colors">Email</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="px-3 py-2 hover:text-blue-600 transition-colors">LinkedIn</a>
+            <a href="/contact" class="px-3 py-2 hover:text-blue-600 transition-colors">Contact</a>
           </div>
         </div>
       </div>

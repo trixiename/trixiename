@@ -6,17 +6,17 @@ const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile
 ---
 
 <BaseLayout title="About - Management Accounting Portfolio" activePage="about">
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <div class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10 mb-12">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10 mb-10 md:mb-12">
       <div class="shrink-0">
         <div class="relative">
           <div class="absolute inset-0 rounded-full bg-blue-100 blur-xl opacity-60"></div>
-          <img src={profilePath} alt="Trixie Anne B. Name" class="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover ring-4 ring-white shadow-lg" />
+          <img src={profilePath} alt="Trixie Anne B. Name" class="relative w-24 h-24 md:w-40 md:h-40 rounded-full object-cover ring-4 ring-white shadow-lg" />
         </div>
       </div>
       <div class="text-center md:text-left">
         <span class="section-label">About</span>
-        <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">About Me</h1>
+        <h1 class="text-2xl md:text-4xl font-bold text-slate-900 mb-3 md:mb-4">About Me</h1>
         <p class="text-lg text-slate-600 leading-relaxed">
           I am a <strong class="text-slate-900">Certified Bookkeeper</strong> and
           <strong class="text-slate-900">recent Management Accounting graduate</strong>
@@ -34,12 +34,12 @@ const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile
     </h2>
 
     <div class="card mb-4">
-      <div class="flex justify-between items-start mb-1">
+      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-0 mb-1">
         <div>
           <h3 class="font-semibold text-slate-900">BS Management Accounting</h3>
           <p class="text-sm text-slate-600">Batangas State University (TNEU) — Arasof Nasugbu Campus</p>
         </div>
-        <span class="text-sm text-slate-400 shrink-0 ml-4">[Year] - [Year]</span>
+        <span class="text-sm text-slate-400 shrink-0">[Year] - [Year]</span>
       </div>
       <div class="mt-3 text-sm text-slate-600">
         <p class="text-slate-700 font-medium mb-1">Dean's List:</p>
@@ -54,12 +54,12 @@ const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile
     </div>
 
     <div class="card">
-      <div class="flex justify-between items-start mb-1">
+      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-0 mb-1">
         <div>
           <h3 class="font-semibold text-slate-900">Senior High School</h3>
           <p class="text-sm text-slate-600">Calaca Senior High School — ABM Strand</p>
         </div>
-        <span class="text-sm text-slate-400 shrink-0 ml-4">2020-2022</span>
+        <span class="text-sm text-slate-400 shrink-0">2020-2022</span>
       </div>
       <ul class="mt-3 space-y-1 text-sm text-slate-600">
         <li class="flex gap-2"><span class="text-blue-600 font-bold">&rsaquo;</span> With High Honors — 2021-2022</li>
@@ -97,12 +97,12 @@ const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile
     </h2>
 
     <div class="card mb-4">
-      <div class="flex justify-between items-start mb-2">
+      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-0 mb-2">
         <div>
           <h3 class="font-semibold text-slate-900">Finance Intern</h3>
           <p class="text-sm text-slate-600">[Company Name] — [Location]</p>
         </div>
-        <span class="text-sm text-slate-400 shrink-0 ml-4">[Month Year] - [Month Year]</span>
+        <span class="text-sm text-slate-400 shrink-0">[Month Year] - [Month Year]</span>
       </div>
       <ul class="space-y-1.5 text-sm text-slate-600">
         <li class="flex gap-2"><span class="text-blue-600 font-bold shrink-0">&rsaquo;</span> Accounts payable processing, bank reconciliation, and monthly financial report preparation</li>
@@ -112,12 +112,12 @@ const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile
     </div>
 
     <div class="card">
-      <div class="flex justify-between items-start mb-2">
+      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-0 mb-2">
         <div>
           <h3 class="font-semibold text-slate-900">Audit Intern</h3>
           <p class="text-sm text-slate-600">[Company Name] — [Location]</p>
         </div>
-        <span class="text-sm text-slate-400 shrink-0 ml-4">[Month Year] - [Month Year]</span>
+        <span class="text-sm text-slate-400 shrink-0">[Month Year] - [Month Year]</span>
       </div>
       <ul class="space-y-1.5 text-sm text-slate-600">
         <li class="flex gap-2"><span class="text-blue-600 font-bold shrink-0">&rsaquo;</span> Participated in external audit engagements including substantive testing and control documentation</li>
