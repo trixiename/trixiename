@@ -7,7 +7,7 @@ export interface Props {
   activePage?: 'home' | 'about' | 'case-studies' | 'contact';
 }
 
-const { title, description = "Professional portfolio - Management Accounting", activePage } = Astro.props;
+const { title, description = "Professional portfolio - Trixie Anne B. Name", activePage } = Astro.props;
 
 const base = import.meta.env.BASE_URL;
 const basePath = base.endsWith('/') ? base.slice(0, -1) : base;
@@ -46,7 +46,7 @@ const navLinks = [
     <header class="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
       <nav class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <a href={basePath + '/'} class="text-lg font-semibold text-slate-900 hover:text-blue-700 transition-colors">
-          <span class="text-blue-600">MA</span> Portfolio
+          Trixie Anne B. Name
         </a>
         <!-- Desktop nav -->
         <div class="hidden sm:flex items-center gap-1">
