@@ -9,11 +9,14 @@ export interface Props {
 
 const { title, description = "Professional portfolio - Management Accounting", activePage } = Astro.props;
 
+const base = import.meta.env.BASE_URL;
+const basePath = base.endsWith('/') ? base.slice(0, -1) : base;
+
 const navLinks = [
-  { href: '/', label: 'Home', id: 'home' },
-  { href: '/about', label: 'About', id: 'about' },
-  { href: '/case-studies', label: 'Projects', id: 'case-studies' },
-  { href: '/contact', label: 'Contact', id: 'contact' },
+  { href: basePath + '/', label: 'Home', id: 'home' },
+  { href: basePath + '/about', label: 'Resume', id: 'about' },
+  { href: basePath + '/case-studies', label: 'Projects', id: 'case-studies' },
+  { href: basePath + '/contact', label: 'Contact', id: 'contact' },
 ];
 ---
 
@@ -35,14 +38,14 @@ const navLinks = [
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={basePath + '/favicon.svg'} />
     <title>{title}</title>
   </head>
   <body class="bg-slate-50 text-slate-800 font-sans antialiased">
     <!-- Navigation -->
     <header class="bg-white/80 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
       <nav class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <a href="/" class="text-lg font-semibold text-slate-900 hover:text-blue-700 transition-colors">
+        <a href={basePath + '/'} class="text-lg font-semibold text-slate-900 hover:text-blue-700 transition-colors">
           <span class="text-blue-600">MA</span> Portfolio
         </a>
         <!-- Desktop nav -->
@@ -103,9 +106,9 @@ const navLinks = [
             <p>&copy; 2026 Trixie Anne B. Name — Management Accounting Portfolio</p>
           </div>
           <div class="flex items-center gap-2 sm:gap-4 text-sm text-slate-400">
-            <a href="mailto:your.email@example.com" class="px-3 py-2 hover:text-blue-600 transition-colors">Email</a>
+            <a href="mailto:trixienameh@ggmail.com" class="px-3 py-2 hover:text-blue-600 transition-colors">Email</a>
             <a href="https://linkedin.com/in/yourprofile" target="_blank" class="px-3 py-2 hover:text-blue-600 transition-colors">LinkedIn</a>
-            <a href="/contact" class="px-3 py-2 hover:text-blue-600 transition-colors">Contact</a>
+            <a href={basePath + '/contact'} class="px-3 py-2 hover:text-blue-600 transition-colors">Contact</a>
           </div>
         </div>
       </div>

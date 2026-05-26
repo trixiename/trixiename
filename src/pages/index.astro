@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 const base = import.meta.env.BASE_URL;
+const basePath = base.endsWith('/') ? base.slice(0, -1) : base;
 const imgPath = base.endsWith('/') ? base + 'bk.jpg' : base + '/bk.jpg';
 const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile.jpg';
 ---
@@ -32,7 +33,7 @@ const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile
           View My Profile
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </a>
-        <a href="/contact" class="btn-secondary">
+        <a href={basePath + '/contact'} class="btn-secondary">
           Contact Me
         </a>
       </div>
@@ -205,7 +206,7 @@ const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile
         <span class="section-label">Portfolio</span>
         <h2 class="section-title">Academic Projects</h2>
       </div>
-      <a href="/case-studies" class="text-sm text-blue-600 hover:text-blue-700 font-medium flex items-center gap-1">
+      <a href={basePath + '/case-studies'} class="text-sm text-blue-600 hover:text-blue-700 font-medium flex items-center gap-1">
         View all
         <span class="text-lg leading-none">&rarr;</span>
       </a>
@@ -234,7 +235,7 @@ const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-xl md:text-3xl font-bold text-white mb-3">Let's Connect</h2>
       <p class="text-blue-100/90 text-sm sm:text-base md:text-lg mb-6 md:mb-8">Actively seeking entry-level management accounting opportunities.</p>
-      <a href="/contact" class="inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-3.5 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors shadow-md text-sm md:text-base">
+      <a href={basePath + '/contact'} class="inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-3.5 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors shadow-md text-sm md:text-base">
         Get in Touch
       </a>
     </div>
