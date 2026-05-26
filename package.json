@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://example.github.io/acc_portfolio",
+  "homepage": "https://justrhey.github.io/acc_portfolio",
   "description": "Professional portfolio for Management Accounting - built with Astro",
   "scripts": {
     "dev": "astro dev",

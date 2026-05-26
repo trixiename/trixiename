@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://example.github.io',
+  site: 'https://justrhey.github.io',
   base: '/acc_portfolio',
   output: 'static',
 });
