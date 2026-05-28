@@ -29,6 +29,46 @@ const navLinks = [
       menu.classList.toggle('hidden');
     });
   }
+
+  // Scroll progress bar + back to top
+  const progressBar = document.getElementById('progress-bar');
+  const backToTop = document.getElementById('back-to-top');
+  if (progressBar) {
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+      progressBar.style.transform = 'scaleX(' + progress + ')';
+
+      if (backToTop) {
+        if (scrollTop > 300) {
+          backToTop.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+          backToTop.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+        } else {
+          backToTop.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+          backToTop.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+        }
+      }
+    });
+  }
+  if (backToTop) {
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // Skeleton loader fade-out
+  const skeleton = document.getElementById('skeleton');
+  if (skeleton) {
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        skeleton.style.opacity = '0';
+        setTimeout(() => {
+          skeleton.style.display = 'none';
+        }, 500);
+      }, 300);
+    });
+  }
 </script>
 <!doctype html>
 <html lang="en">
@@ -38,8 +78,61 @@ const navLinks = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href={basePath + '/favicon.svg'} />
     <title>{title}</title>
+    <style>
+      @keyframes shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+      }
+      .skeleton-shimmer {
+        background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+        background-size: 200% 100%;
+        animation: shimmer 1.5s ease-in-out infinite;
+      }
+    </style>
   </head>
   <body class="bg-slate-50 text-slate-800 font-sans antialiased">
+    <!-- Skeleton loader -->
+    <div id="skeleton" class="fixed inset-0 z-[100] bg-white transition-opacity duration-500">
+      <div class="animate-pulse">
+        <!-- Skeleton header -->
+        <div class="h-16 border-b border-slate-100 flex items-center px-6 max-w-5xl mx-auto">
+          <div class="w-44 h-4 skeleton-shimmer rounded"></div>
+        </div>
+        <!-- Skeleton hero -->
+        <div class="max-w-5xl mx-auto px-6 pt-16 pb-12">
+          <div class="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10">
+            <div class="w-28 h-28 md:w-40 md:h-40 rounded-full skeleton-shimmer shrink-0"></div>
+            <div class="flex-1 w-full space-y-3 pt-2">
+              <div class="h-7 md:h-9 skeleton-shimmer rounded w-3/4 mx-auto md:mx-0"></div>
+              <div class="h-4 skeleton-shimmer rounded w-1/2 mx-auto md:mx-0"></div>
+              <div class="h-4 skeleton-shimmer rounded w-full max-w-md mx-auto md:mx-0 mt-5"></div>
+              <div class="h-4 skeleton-shimmer rounded w-3/4 max-w-sm mx-auto md:mx-0"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Skeleton cards -->
+        <div class="border-y border-slate-100 py-10">
+          <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-6">
+            <div class="h-44 skeleton-shimmer rounded-xl"></div>
+            <div class="h-44 skeleton-shimmer rounded-xl"></div>
+          </div>
+        </div>
+        <!-- Skeleton bottom bar -->
+        <div class="py-10">
+          <div class="max-w-5xl mx-auto px-6">
+            <div class="h-8 skeleton-shimmer rounded w-1/4 mx-auto"></div>
+            <div class="grid md:grid-cols-3 gap-6 mt-8">
+              <div class="h-28 skeleton-shimmer rounded-xl"></div>
+              <div class="h-28 skeleton-shimmer rounded-xl"></div>
+              <div class="h-28 skeleton-shimmer rounded-xl"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll progress bar -->
+    <div id="progress-bar" class="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-blue-500 via-indigo-500 to-blue-600 z-[60] origin-left" style="transform: scaleX(0);"></div>
     <!-- Navigation -->
     <header class="bg-white/85 backdrop-blur-lg border-b border-slate-200/70 sticky top-0 z-50 shadow-[0_1px_4px_rgba(0,0,0,0.04)]">
       <nav class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
@@ -112,5 +205,10 @@ const navLinks = [
         </div>
       </div>
     </footer>
+
+    <!-- Back to top -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 z-50 w-10 h-10 rounded-full bg-white border border-slate-200/70 shadow-lg flex items-center justify-center text-slate-400 hover:text-blue-600 hover:border-blue-200 hover:shadow-xl transition-all duration-300 opacity-0 translate-y-4 pointer-events-none" aria-label="Back to top">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+    </button>
   </body>
 </html>
