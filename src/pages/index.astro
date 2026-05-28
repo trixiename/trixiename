@@ -29,11 +29,11 @@ const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile
         budgeting, financial reporting, and full-cycle bookkeeping.
       </p>
       <div class="flex flex-col sm:flex-row gap-3 mt-6 md:mt-8 justify-center md:justify-start">
-        <a href={basePath + '/about'} class="btn-primary">
+        <a href={basePath + '/about'} draggable="false" class="btn-primary">
           View My Resume
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </a>
-        <a href={basePath + '/contact'} class="btn-secondary">
+        <a href={basePath + '/contact'} draggable="false" class="btn-secondary">
           Contact Me
         </a>
       </div>
@@ -376,7 +376,7 @@ const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-xl md:text-3xl font-bold text-white mb-3">Let's Connect</h2>
       <p class="text-blue-100/90 text-sm sm:text-base md:text-lg mb-6 md:mb-8">Actively seeking entry-level management accounting opportunities.</p>
-      <a href={basePath + '/contact'} class="inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-3.5 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors shadow-md text-sm md:text-base">
+      <a href={basePath + '/contact'} draggable="false" class="inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-3.5 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors shadow-md text-sm md:text-base">
         Get in Touch
       </a>
     </div>
