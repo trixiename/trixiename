@@ -16,7 +16,7 @@ const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile
         <div class="flex flex-col sm:flex-row items-center sm:items-start gap-5 sm:gap-8">
           <!-- Photo -->
           <div class="shrink-0">
-            <img src={profilePath} alt="Trixie Anne B. Name" class="w-20 h-20 sm:w-28 sm:h-28 rounded-full object-cover ring-4 ring-slate-100" />
+            <img src={profilePath} alt="Trixie Anne B. Name" draggable="false" class="w-20 h-20 sm:w-28 sm:h-28 rounded-full object-cover ring-4 ring-slate-100 select-none" style="-webkit-user-drag: none; user-select: none;" />
           </div>
           <div class="text-center sm:text-left flex-1">
             <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">Trixie Anne B. Name</h1>
@@ -113,7 +113,7 @@ const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile
             and internal controls.
           </p>
           <a href={imgPath} target="_blank" class="inline-block mt-3 group">
-            <img src={imgPath} alt="Certified Bookkeeper Certificate" class="w-full max-w-xs sm:max-w-sm rounded-lg border border-slate-200 shadow-sm group-hover:shadow-md transition-shadow" />
+            <img src={imgPath} alt="Certified Bookkeeper Certificate" draggable="false" class="w-full max-w-xs sm:max-w-sm rounded-lg border border-slate-200 shadow-sm group-hover:shadow-md transition-shadow select-none" style="-webkit-user-drag: none; user-select: none;" />
           </a>
         </section>
 

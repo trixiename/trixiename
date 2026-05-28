@@ -14,7 +14,7 @@ const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile
         <div class="shrink-0">
           <div class="relative">
             <div class="absolute inset-0 rounded-full bg-blue-100 blur-xl opacity-60"></div>
-            <img src={profilePath} alt="Trixie Anne B. Name" class="relative w-24 h-24 md:w-36 md:h-36 rounded-full object-cover ring-4 ring-white shadow-lg" />
+            <img src={profilePath} alt="Trixie Anne B. Name" draggable="false" class="relative w-28 h-28 md:w-40 md:h-40 rounded-full object-cover ring-4 ring-white shadow-lg select-none" style="-webkit-user-drag: none; user-select: none;" />
           </div>
         </div>
         <div class="text-center md:text-left">
@@ -101,7 +101,7 @@ const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile
               </p>
             </div>
             <a href={imgPath} target="_blank" class="block mt-4 group">
-              <img src={imgPath} alt="Certificate" class="w-full max-w-sm rounded-xl border border-slate-200 shadow-sm group-hover:shadow-lg transition-shadow" />
+              <img src={imgPath} alt="Certificate" draggable="false" class="w-full max-w-sm rounded-xl border border-slate-200 shadow-sm group-hover:shadow-lg transition-shadow select-none" style="-webkit-user-drag: none; user-select: none;" />
             </a>
           </div>
         </div>
