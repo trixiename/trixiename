@@ -4,7 +4,7 @@ import '../styles/global.css';
 export interface Props {
   title: string;
   description?: string;
-  activePage?: 'home' | 'about' | 'case-studies' | 'contact';
+  activePage?: 'home' | 'about' | 'contact';
 }
 
 const { title, description = "Professional portfolio - Trixie Anne B. Name", activePage } = Astro.props;
@@ -15,7 +15,6 @@ const basePath = base.endsWith('/') ? base.slice(0, -1) : base;
 const navLinks = [
   { href: basePath + '/', label: 'Home', id: 'home' },
   { href: basePath + '/about', label: 'Resume', id: 'about' },
-  { href: basePath + '/case-studies', label: 'Projects', id: 'case-studies' },
   { href: basePath + '/contact', label: 'Contact', id: 'contact' },
 ];
 ---
@@ -185,19 +184,6 @@ const navLinks = [
               <div class="px-6 sm:px-10 py-4 border-t border-slate-100 bg-slate-50/50">
                 <div class="h-3 skeleton-shimmer rounded w-48 mx-auto"></div>
               </div>
-            </div>
-          </div>
-        </>}
-
-        {activePage === 'case-studies' && <>
-          <!-- Case Studies: Header + cards -->
-          <div class="max-w-5xl mx-auto px-6 py-10">
-            <div class="h-3 skeleton-shimmer rounded-full w-20 mb-4"></div>
-            <div class="h-8 md:h-10 skeleton-shimmer rounded w-2/5 mb-8"></div>
-            <div class="space-y-6">
-              {[1,2,3,4,5,6].map(i => (
-                <div key={i} class="h-36 skeleton-shimmer rounded-xl"></div>
-              ))}
             </div>
           </div>
         </>}
