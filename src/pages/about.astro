@@ -20,8 +20,7 @@ const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile
           </div>
           <div class="text-center sm:text-left flex-1">
             <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">Trixie Anne B. Name</h1>
-            <p class="text-sm sm:text-base text-blue-700 font-medium mt-1">BS in Management Accounting Graduate</p>
-            <p class="text-sm sm:text-base text-blue-700 font-medium">Certified Bookkeeper</p>
+            <p class="text-sm sm:text-base text-blue-700 font-medium mt-1">Management Accountancy Professional</p>
             <!-- Contact strip -->
             <div class="flex flex-wrap justify-center sm:justify-start gap-x-1 gap-y-0.5 mt-3 text-xs sm:text-sm text-slate-500">
               <span class="whitespace-nowrap">trixienameh@gmail.com</span>
@@ -38,12 +37,10 @@ const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile
         <div class="mt-5 sm:mt-6 pt-4 sm:pt-5 border-t border-slate-100">
           <h2 class="text-xs font-bold text-slate-400 uppercase tracking-[0.15em] mb-2">Professional Summary</h2>
           <p class="text-sm sm:text-base text-slate-700 leading-relaxed">
-            Certified Bookkeeper and recent Management Accounting graduate from Batangas State University (TNEU).
-            Consistently recognized on the Dean's List throughout the program. Internship experience in
-            finance operations and audit, with hands-on exposure to accounts payable, bank reconciliation,
-            financial reporting, budget variance analysis, and external audit procedures. Seeking an
-            entry-level Management Accounting role to apply academic training and practical skills in
-            cost analysis, budgeting, and financial planning.
+            Management Accountancy professional with a strong academic foundation in financial management,
+            bookkeeping and analytical reporting. Eager to apply and contribute accounting knowledge
+            in an internship role by integrating academic learning with hands-on experience to learn
+            real-world experiences and grow professionally.
           </p>
         </div>
       </div>
@@ -53,34 +50,53 @@ const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile
 
         <!-- EDUCATION -->
         <section>
-          <h2 class="text-sm font-bold text-slate-900 uppercase tracking-[0.12em] border-b border-slate-300 pb-1.5 mb-4">Education</h2>
+          <h2 class="text-sm font-bold text-slate-900 uppercase tracking-[0.12em] border-b border-slate-300 pb-1.5 mb-4">Education &amp; Certification</h2>
 
           <div class="mb-4">
             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-0.5">
               <div>
                 <h3 class="text-sm font-bold text-slate-900">BS Management Accounting</h3>
-                <p class="text-sm text-slate-600">Batangas State University (TNEU) — Arasof Nasugbu Campus</p>
+                <p class="text-sm text-slate-600">Batangas State University (TNEU) &mdash; ARASOF Nasugbu Campus</p>
               </div>
               <span class="text-xs text-slate-400 shrink-0 sm:text-right">2022 &ndash; 2026</span>
             </div>
-            <p class="text-xs text-slate-500 mt-1 italic">Transferred from BS Accountancy (1st&ndash;2nd Year)</p>
             <ul class="mt-2 space-y-1">
               <li class="text-xs sm:text-sm text-slate-600 flex gap-2">
                 <span class="text-blue-600 shrink-0 mt-0.5">&bull;</span>
-                <span><strong>Dean's List:</strong> 1st Sem, 1st Year (BS Accty); 1st Sem, 2nd Year (BS Accty); 1st Sem, 3rd Year (BS MA)</span>
-              </li>
-              <li class="text-xs sm:text-sm text-slate-600 flex gap-2">
-                <span class="text-blue-600 shrink-0 mt-0.5">&bull;</span>
-                <span><strong>Relevant Coursework:</strong> Cost Accounting, Managerial Accounting, Financial Management, Taxation, Auditing, Business Analytics, Strategic Management</span>
+                <span><strong>Dean's List:</strong> 1st Sem, 1st Year (BS Accty); 1st Sem, 2nd Year (BS Accty); 1st Sem, 3rd Year (BS MA); 2nd Sem, 4th Year (BS MA)</span>
               </li>
             </ul>
           </div>
 
-          <div>
+          <div class="mb-4">
             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-0.5">
               <div>
-                <h3 class="text-sm font-bold text-slate-900">Senior High School — ABM Strand</h3>
-                <p class="text-sm text-slate-600">Calaca Senior High School</p>
+                <h3 class="text-sm font-bold text-slate-900">Certified Bookkeeper</h3>
+                <p class="text-sm text-slate-600">PICAT (Philippine Institute of Certified Accounting Technologist)</p>
+              </div>
+              <span class="text-xs text-slate-400 shrink-0 sm:text-right">2025</span>
+            </div>
+            <a href={imgPath} target="_blank" draggable="false" class="inline-block mt-3 group">
+              <img src={imgPath} alt="Certified Bookkeeper Certificate" draggable="false" class="w-full max-w-xs sm:max-w-sm rounded-lg border border-slate-200 shadow-sm group-hover:shadow-md transition-shadow select-none" style="-webkit-user-drag: none; user-select: none;" />
+            </a>
+          </div>
+
+          <div class="mb-4">
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-0.5">
+              <div>
+                <h3 class="text-sm font-bold text-slate-900">HP LIFE Online Course</h3>
+                <p class="text-sm text-slate-600">HP Foundation</p>
+              </div>
+              <span class="text-xs text-slate-400 shrink-0 sm:text-right">2022</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">Cash Flow, Profit and Loss</p>
+          </div>
+
+          <div class="mb-4">
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-0.5">
+              <div>
+                <h3 class="text-sm font-bold text-slate-900">Accountancy, Business &amp; Management (ABM)</h3>
+                <p class="text-sm text-slate-600">Calaca Senior High School &mdash; Calaca City, Batangas</p>
               </div>
               <span class="text-xs text-slate-400 shrink-0 sm:text-right">2020 &ndash; 2022</span>
             </div>
@@ -95,52 +111,23 @@ const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile
               </li>
             </ul>
           </div>
-        </section>
 
-        <!-- CERTIFICATION -->
-        <section>
-          <h2 class="text-sm font-bold text-slate-900 uppercase tracking-[0.12em] border-b border-slate-300 pb-1.5 mb-4">Certification</h2>
-
-          <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-0.5">
-            <div>
-              <h3 class="text-sm font-bold text-slate-900">Certified Bookkeeper</h3>
-              <p class="text-sm text-slate-600">AssestPro Training — [Year]</p>
-            </div>
-          </div>
-          <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
-            Certified in bookkeeping principles including double-entry accounting,
-            bank reconciliation, payroll processing, financial statement preparation,
-            and internal controls.
-          </p>
-          <a href={imgPath} target="_blank" draggable="false" class="inline-block mt-3 group">
-            <img src={imgPath} alt="Certified Bookkeeper Certificate" draggable="false" class="w-full max-w-xs sm:max-w-sm rounded-lg border border-slate-200 shadow-sm group-hover:shadow-md transition-shadow select-none" style="-webkit-user-drag: none; user-select: none;" />
-          </a>
-        </section>
-
-        <!-- INTERNSHIP EXPERIENCE -->
-        <section>
-          <h2 class="text-sm font-bold text-slate-900 uppercase tracking-[0.12em] border-b border-slate-300 pb-1.5 mb-4">Internship Experience</h2>
-
-          <div class="mb-5">
+          <div class="mb-4">
             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-0.5">
               <div>
-                <h3 class="text-sm font-bold text-slate-900">Finance Intern</h3>
-                <p class="text-sm text-slate-600 italic">[Company Name] — [Location]</p>
+                <h3 class="text-sm font-bold text-slate-900">Junior High School</h3>
+                <p class="text-sm text-slate-600">Dacanlao Gregorio Agoncillo National High School &mdash; Calaca City, Batangas</p>
               </div>
-              <span class="text-xs text-slate-400 shrink-0 sm:text-right">[Month Year] &ndash; [Month Year]</span>
+              <span class="text-xs text-slate-400 shrink-0 sm:text-right">2016 &ndash; 2020</span>
             </div>
             <ul class="mt-2 space-y-1">
               <li class="text-xs sm:text-sm text-slate-600 flex gap-2">
                 <span class="text-blue-600 shrink-0 mt-0.5">&bull;</span>
-                <span>Accounts payable processing, bank reconciliation, and monthly financial report preparation</span>
+                <span>Consistent With Honors (2017&ndash;2020)</span>
               </li>
               <li class="text-xs sm:text-sm text-slate-600 flex gap-2">
                 <span class="text-blue-600 shrink-0 mt-0.5">&bull;</span>
-                <span>Supported annual budget planning and variance analysis for department heads</span>
-              </li>
-              <li class="text-xs sm:text-sm text-slate-600 flex gap-2">
-                <span class="text-blue-600 shrink-0 mt-0.5">&bull;</span>
-                <span>Maintained accurate financial records ensuring compliance with company policies</span>
+                <span>Member, The Mathematics Association of the Philippines, Inc. (MTAP)</span>
               </li>
             </ul>
           </div>
@@ -148,66 +135,81 @@ const profilePath = base.endsWith('/') ? base + 'profile.jpg' : base + '/profile
           <div>
             <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-0.5">
               <div>
-                <h3 class="text-sm font-bold text-slate-900">Audit Intern</h3>
-                <p class="text-sm text-slate-600 italic">[Company Name] — [Location]</p>
+                <h3 class="text-sm font-bold text-slate-900">Elementary</h3>
+                <p class="text-sm text-slate-600">Calaca Central School &mdash; Calaca City, Batangas</p>
               </div>
-              <span class="text-xs text-slate-400 shrink-0 sm:text-right">[Month Year] &ndash; [Month Year]</span>
+              <span class="text-xs text-slate-400 shrink-0 sm:text-right">2010 &ndash; 2016</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- INTERNSHIP EXPERIENCE -->
+        <section>
+          <h2 class="text-sm font-bold text-slate-900 uppercase tracking-[0.12em] border-b border-slate-300 pb-1.5 mb-4">Internship Experience</h2>
+
+          <div>
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-0.5">
+              <div>
+                <h3 class="text-sm font-bold text-slate-900">Human Resource Development Intern</h3>
+                <p class="text-sm text-slate-600 italic">Batangas I Electric Cooperative, Inc. (BATELEC I)</p>
+              </div>
+              <span class="text-xs text-slate-400 shrink-0 sm:text-right">Aug 20 &ndash; Nov 11, 2025</span>
             </div>
             <ul class="mt-2 space-y-1">
               <li class="text-xs sm:text-sm text-slate-600 flex gap-2">
                 <span class="text-blue-600 shrink-0 mt-0.5">&bull;</span>
-                <span>Participated in external audit engagements including substantive testing and control documentation</span>
+                <span>Assisted in payroll operations, including encoding labor costing, checking employees&rsquo; daily reports, and distributing pay slips.</span>
               </li>
               <li class="text-xs sm:text-sm text-slate-600 flex gap-2">
                 <span class="text-blue-600 shrink-0 mt-0.5">&bull;</span>
-                <span>Prepared audit workpapers in accordance with Philippine Standards on Auditing</span>
+                <span>Organized and filed personnel documents while ensuring confidentiality of employee information.</span>
               </li>
               <li class="text-xs sm:text-sm text-slate-600 flex gap-2">
                 <span class="text-blue-600 shrink-0 mt-0.5">&bull;</span>
-                <span>Collaborated with senior auditors to identify process improvements for client accounting systems</span>
+                <span>Assisted in organizing training programs and employee engagement activities.</span>
               </li>
             </ul>
           </div>
         </section>
 
-        <!-- SKILLS -->
+        <!-- SEMINARS AND PARTICIPATIONS -->
         <section>
-          <h2 class="text-sm font-bold text-slate-900 uppercase tracking-[0.12em] border-b border-slate-300 pb-1.5 mb-4">Skills &amp; Expertise</h2>
+          <h2 class="text-sm font-bold text-slate-900 uppercase tracking-[0.12em] border-b border-slate-300 pb-1.5 mb-4">Seminars &amp; Participations</h2>
 
-          <div class="grid sm:grid-cols-2 gap-5">
-            <div>
-              <h3 class="text-xs font-bold text-slate-500 uppercase tracking-[0.1em] mb-2">Accounting &amp; Finance</h3>
-              <ul class="space-y-1">
-                <li class="text-xs sm:text-sm text-slate-600 flex gap-2"><span class="text-blue-600 shrink-0">&bull;</span> Certified Bookkeeping (Full-Cycle)</li>
-                <li class="text-xs sm:text-sm text-slate-600 flex gap-2"><span class="text-blue-600 shrink-0">&bull;</span> Cost Accounting &amp; Analysis</li>
-                <li class="text-xs sm:text-sm text-slate-600 flex gap-2"><span class="text-blue-600 shrink-0">&bull;</span> Budgeting &amp; Forecasting</li>
-                <li class="text-xs sm:text-sm text-slate-600 flex gap-2"><span class="text-blue-600 shrink-0">&bull;</span> Financial Statement Preparation</li>
-                <li class="text-xs sm:text-sm text-slate-600 flex gap-2"><span class="text-blue-600 shrink-0">&bull;</span> Bank Reconciliation &amp; Payroll</li>
-                <li class="text-xs sm:text-sm text-slate-600 flex gap-2"><span class="text-blue-600 shrink-0">&bull;</span> Variance Analysis</li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="text-xs font-bold text-slate-500 uppercase tracking-[0.1em] mb-2">Tools &amp; Technology</h3>
-              <ul class="space-y-1">
-                <li class="text-xs sm:text-sm text-slate-600 flex gap-2"><span class="text-blue-600 shrink-0">&bull;</span> Microsoft Office Suite (Word, Excel, PowerPoint)</li>
-                <li class="text-xs sm:text-sm text-slate-600 flex gap-2"><span class="text-blue-600 shrink-0">&bull;</span> BIR Forms &amp; Tax Compliance</li>
-                <li class="text-xs sm:text-sm text-slate-600 flex gap-2"><span class="text-blue-600 shrink-0">&bull;</span> Google Workspace</li>
-                <li class="text-xs sm:text-sm text-slate-600 flex gap-2"><span class="text-blue-600 shrink-0">&bull;</span> QuickBooks (Basic)</li>
-                <li class="text-xs sm:text-sm text-slate-600 flex gap-2"><span class="text-blue-600 shrink-0">&bull;</span> Online Banking &amp; Payment Platforms</li>
-              </ul>
-            </div>
-          </div>
+          <ul class="space-y-1.5">
+            <li class="text-xs sm:text-sm text-slate-600 flex gap-2">
+              <span class="text-blue-600 shrink-0 mt-0.5">&bull;</span>
+              <span>Pathways to Success: Navigating your Career in Management Accounting (Webinar) &mdash; November 2022</span>
+            </li>
+            <li class="text-xs sm:text-sm text-slate-600 flex gap-2">
+              <span class="text-blue-600 shrink-0 mt-0.5">&bull;</span>
+              <span>National Federation of Junior Philippine Institute of Accountants &mdash; Member 2023&ndash;2024</span>
+            </li>
+          </ul>
         </section>
 
-        <!-- PROFESSIONAL GOALS -->
+        <!-- SKILLS -->
         <section>
-          <h2 class="text-sm font-bold text-slate-900 uppercase tracking-[0.12em] border-b border-slate-300 pb-1.5 mb-4">Professional Goals</h2>
-          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
-            Seeking an <strong>entry-level Management Accounting role</strong> where I can apply my
-            academic training, certification, and internship experience. Particularly interested in
-            cost analysis, budgeting, and financial planning roles where I can contribute to
-            data-driven business decisions and grow as a finance professional.
-          </p>
+          <h2 class="text-sm font-bold text-slate-900 uppercase tracking-[0.12em] border-b border-slate-300 pb-1.5 mb-4">Skills</h2>
+
+          <ul class="space-y-1.5">
+            <li class="text-xs sm:text-sm text-slate-600 flex gap-2">
+              <span class="text-blue-600 shrink-0 mt-0.5">&bull;</span>
+              <span>Proficient in using Microsoft Office (Word, Excel, PowerPoint), and Canva.</span>
+            </li>
+            <li class="text-xs sm:text-sm text-slate-600 flex gap-2">
+              <span class="text-blue-600 shrink-0 mt-0.5">&bull;</span>
+              <span>Ability to work effectively both independently and in a team environment.</span>
+            </li>
+            <li class="text-xs sm:text-sm text-slate-600 flex gap-2">
+              <span class="text-blue-600 shrink-0 mt-0.5">&bull;</span>
+              <span>Strong communication and interpersonal skills.</span>
+            </li>
+            <li class="text-xs sm:text-sm text-slate-600 flex gap-2">
+              <span class="text-blue-600 shrink-0 mt-0.5">&bull;</span>
+              <span>Excellent in time management.</span>
+            </li>
+          </ul>
         </section>
 
       </div>
