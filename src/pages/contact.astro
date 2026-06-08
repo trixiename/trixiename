@@ -130,9 +130,64 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       const success = document.getElementById('form-success');
       const submitBtn = document.getElementById('submit-btn');
 
+      // Rate limiting: max 3 submissions per browser
+      const STORAGE_KEY = 'portfolio_submit_count';
+      const MAX_SUBMITS = 3;
+      const RESET_HOURS = 24;
+
+      function getSubmitCount() {
+        try {
+          const stored = localStorage.getItem(STORAGE_KEY);
+          if (!stored) return 0;
+          const data = JSON.parse(stored);
+          const elapsed = Date.now() - data.timestamp;
+          if (elapsed > RESET_HOURS * 60 * 60 * 1000) {
+            localStorage.removeItem(STORAGE_KEY);
+            return 0;
+          }
+          return data.count;
+        } catch {
+          return 0;
+        }
+      }
+
+      function incrementSubmitCount() {
+        try {
+          const count = getSubmitCount();
+          localStorage.setItem(STORAGE_KEY, JSON.stringify({
+            count: count + 1,
+            timestamp: Date.now()
+          }));
+        } catch {}
+      }
+
+      function getRemainingSubmits() {
+        return Math.max(0, MAX_SUBMITS - getSubmitCount());
+      }
+
+      // Check rate limit on page load
+      if (form && getSubmitCount() >= MAX_SUBMITS) {
+        form.innerHTML = `
+          <div class="text-center py-8">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-amber-100 rounded-full mb-4">
+              <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">Submission Limit Reached</h3>
+            <p class="text-sm text-slate-600">You've reached the maximum number of submissions. Please email me directly at <a href="mailto:trixienameh@gmail.com" class="text-blue-600 hover:underline">trixienameh@gmail.com</a></p>
+          </div>
+        `;
+      }
+
       if (form) {
         form.addEventListener('submit', async (e) => {
           e.preventDefault();
+
+          // Check rate limit before submitting
+          if (getSubmitCount() >= MAX_SUBMITS) {
+            alert('You have reached the submission limit. Please email me directly at trixienameh@gmail.com');
+            return;
+          }
+
           submitBtn.disabled = true;
           submitBtn.textContent = 'Sending...';
 
@@ -147,6 +202,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             });
             const json = await res.json();
             if (json.success) {
+              incrementSubmitCount();
               form.classList.add('hidden');
               success.classList.remove('hidden');
             } else {

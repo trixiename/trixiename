@@ -3,52 +3,76 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const projects = [
   {
-    slug: 'internship-finance',
+    slug: 'internship-batelec',
     category: 'Internship',
-    title: 'Finance Intern — [Company Name]',
-    description: 'Supported the finance team in day-to-day accounting operations including accounts payable processing, bank reconciliation, and preparation of monthly financial reports. Assisted in the annual budget planning and variance analysis.',
-    tools: ['Excel', 'QuickBooks', 'Accounting Software'],
-    outcomes: ['Processed 200+ invoices with 99.8% accuracy rate', 'Assisted in monthly close process reducing turnaround by 2 days', 'Presented budget variance analysis to finance manager'],
-  },
-  {
-    slug: 'internship-audit',
-    category: 'Internship',
-    title: 'Audit Intern — [Company Name]',
-    description: 'Worked alongside senior auditors in conducting external audits for client companies. Performed substantive testing, documented internal control processes, and prepared audit workpapers in compliance with auditing standards.',
-    tools: ['Excel', 'Audit Software', 'PSA/AAS'],
-    outcomes: ['Contributed to 3 successful client audit engagements', 'Identified 2 control weaknesses with recommended remediation', 'Completed audit documentation 100% on time'],
+    title: 'Human Resource Development Intern — BATELEC I',
+    description: 'Completed a university-required internship at Batangas I Electric Cooperative, Inc., gaining hands-on experience in payroll operations, personnel document management, and employee engagement activities within a real corporate HR setting.',
+    tools: ['Microsoft Excel', 'Payroll System', 'Document Management'],
+    outcomes: [
+      'Assisted in encoding labor costing and checking employees\' daily reports for payroll processing',
+      'Organized and filed personnel documents while ensuring confidentiality of employee information',
+      'Supported training program logistics and employee engagement activities'
+    ],
   },
   {
     slug: 'thesis-cost-analysis',
     category: 'Capstone Thesis',
     title: 'Cost Behavior Analysis in the Service Industry',
-    description: 'Conducted an in-depth study of cost behavior patterns for a local service company using activity-based costing (ABC) methodology. Analyzed fixed vs. variable costs, identified key cost drivers, and recommended strategies for cost optimization.',
-    tools: ['Excel', 'SPSS', 'ABC Framework'],
-    outcomes: ['Identified 3 major cost drivers representing 70% of overhead', 'Proposed restructuring saving estimated 15% in operational costs', 'Presented to faculty panel — received distinction'],
+    description: 'Conducted an in-depth study of cost behavior patterns for a local service company using activity-based costing methodology. Analyzed fixed vs. variable costs, identified key cost drivers, and recommended strategies for cost optimization.',
+    tools: ['Excel', 'ABC Framework', 'Financial Analysis'],
+    outcomes: [
+      'Identified 3 major cost drivers representing 70% of overhead',
+      'Proposed restructuring strategy with estimated cost savings',
+      'Presented to faculty panel and received positive feedback'
+    ],
   },
   {
     slug: 'budget-competition',
     category: 'Case Competition',
-    title: 'Inter-University Budgeting Simulation — 2nd Place',
-    description: 'Led a cross-functional team of 4 in a 2-day intensive budgeting simulation. Developed a master budget, cash flow forecast, and strategic recommendations for a manufacturing company case study.',
-    tools: ['Excel Financial Modeling', 'PowerPoint', 'Team Presentation'],
-    outcomes: ['2nd place among 12 competing university teams', 'Built fully integrated 3-statement financial model', 'Received "Best Analytical Approach" recognition from judges'],
+    title: 'Inter-University Budgeting Simulation',
+    description: 'Competed in a university-level budgeting simulation, developing a master budget, cash flow forecast, and strategic recommendations for a manufacturing company case study.',
+    tools: ['Excel Financial Modeling', 'PowerPoint', 'Presentation'],
+    outcomes: [
+      'Developed a fully integrated master budget and cash flow forecast',
+      'Demonstrated variance analysis and strategic decision-making',
+      'Presented recommendations to a panel of judges'
+    ],
   },
   {
     slug: 'dashboard-project',
     category: 'Academic Project',
     title: 'Management KPI Dashboard for a Retail Business',
-    description: 'As part of a Management Accounting capstone course, designed a performance measurement framework and built an interactive KPI dashboard tracking revenue, cost trends, inventory turnover, and profitability ratios.',
+    description: 'As part of a Management Accounting course, designed a performance measurement framework and built an interactive KPI dashboard tracking revenue, cost trends, inventory turnover, and profitability ratios.',
     tools: ['Excel', 'PowerPoint', 'Pivot Tables'],
-    outcomes: ['Created 15+ interactive KPIs with drill-down capability', 'Simulated real-world monthly reporting process', 'Demonstrated variance analysis and trend interpretation'],
+    outcomes: [
+      'Created 15+ interactive KPIs with trend analysis',
+      'Simulated real-world monthly reporting process',
+      'Demonstrated variance analysis and data-driven insights'
+    ],
   },
   {
-    slug: 'tax-volunteer',
-    category: 'Community Service',
-    title: 'Volunteer Tax Preparation Program',
-    description: 'Participated in a university-sponsored community tax assistance program, preparing income tax returns for low-income individuals and families under the supervision of certified accountants.',
-    tools: ['Tax Preparation Software', 'BIR/Tax Forms'],
-    outcomes: ['Prepared 25+ tax returns over 2 semesters', 'Ensured 100% compliance accuracy rate', 'Developed client communication and documentation skills'],
+    slug: 'webinar-pathways',
+    category: 'Seminar',
+    title: 'Pathways to Success: Navigating your Career in Management Accounting',
+    description: 'Attended an industry webinar focused on career pathways in Management Accounting, covering emerging trends, professional certifications, and skills needed for success in the field.',
+    tools: ['Online Learning Platform'],
+    outcomes: [
+      'Gained insights into CMA and other professional certifications',
+      'Learned about emerging trends in management accounting',
+      'Networked with industry professionals and peers'
+    ],
+  },
+  {
+    slug: 'jpia-membership',
+    category: 'Professional Organization',
+    title: 'National Federation of Junior Philippine Institute of Accountants — Member',
+    description: 'Active member of the student accounting organization, participating in seminars, workshops, and networking events designed to bridge academic learning with professional practice.',
+    tools: ['Event Management', 'Team Collaboration'],
+    outcomes: [
+      'Attended professional development seminars and workshops',
+      'Collaborated with fellow accounting students on organizational activities',
+      'Built professional network within the accounting community'
+    ],
   },
 ];
 ---
@@ -58,8 +82,8 @@ const projects = [
     <span class="section-label">Portfolio</span>
     <h1 class="text-2xl md:text-4xl font-bold text-slate-900 mb-3 md:mb-4">Internships & Projects</h1>
     <p class="text-slate-600 text-sm sm:text-base md:text-lg mb-8 md:mb-12 max-w-2xl leading-relaxed">
-      Internship experience, academic projects, and case competitions demonstrating
-      practical application of management accounting principles and a strong foundation for career growth.
+      Internship experience, academic projects, and professional development activities
+      demonstrating practical application of management accounting principles.
     </p>
 
     <div class="space-y-6">
